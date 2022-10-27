@@ -1,0 +1,37 @@
+header{
+    background-color: #ffffff;
+}
+h1{
+    font-family:'Montserrat';
+}
+.code{
+    font-family:'Fira Code';
+}
+.note{
+    font-family: 'Montserrat';
+    font-size: 14px;
+}
+.titulopractica{
+    background-color: #F0BE24;
+    font-family: 'Fira Code';
+}
+.enunciado{
+    border-bottom: 5px #F0BE24;
+    border-style: double;
+    border-top:transparent;
+    border-right: transparent;
+    border-left: transparent;
+    font-family: 'Fira Code';
+    font-weight: 1000;
+    background-color:#f0bd244d;
+}
+.ejercicio{
+    font-family: 'Fira Code';
+    font-size: 16px;
+    font-weight: 2000;
+    border-bottom: 2px #F0BE24;
+    border-style:dashed;
+    border-top:transparent;
+    border-right: transparent;
+    border-left: transparent;
+}
