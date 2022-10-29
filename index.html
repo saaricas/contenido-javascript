@@ -224,7 +224,7 @@ alert("Este número es negativo"); //Si el número es negativo nos aparecerá es
                     <p>Crear un programa que dadas 2 variables tipo <strong>number</strong>, las sume. si la suma es <strong>mayor que 50</strong> que lo multiplique por 2, si no, por 3.</p>
                     <p>Para ello creamos un programa para determinar tu "número de la suerte"</p>
                     <p><img src="img/ej_17.png" alt="De número a string" class="img-fluid" width="75%"></p>
-<!--CÓDIGO EJERCICIO 17 <script>
+<!-- CÓDIGO EJERCICIO 17 <script>
     alert("Vamos a crear tu número mágico mediante tus dos números favoritos"); //Creamos un primer mensaje para saber de qué trata el programa
     let numberA = prompt("Define tu primer número favorito"); // A través del prompt se    declara el primer número
     let numberB = prompt("Define tu segundo número favorito"); // A través de este se    declara el segundo número
@@ -237,6 +237,36 @@ alert("Este número es negativo"); //Si el número es negativo nos aparecerá es
         alert("Tu número es " + resultB);
     }
 </script> -->
+                <li><p class="ejercicio">Ejercicio 18</p>
+                    <p>Crea un programa que dada una variable <strong>number</strong>, nos diga si es un múltiplo de 3. Si no lo es, que nos diga si es múltiplo de 8 y, si no, que imprima un mensaje de error</p>
+                    <p><img src="img/ej_18.png" alt="De número a string" class="img-fluid" width="75%"></p>
+<!-- CÓDIGO EJERCICIO 18 <script>
+    let number = prompt("Vamos a comprobar si tu número es múltiplo de 3 o de 8. Inserta tu número"); //Pedimos al usuario que introduzca un número en nuestro programa
+    if ((number % 3) == 0) { //comprobamos si es múltiplo de 3
+        alert(number + " es múltiplo de 3"); // este será el mensaje que devolverá si la condición es true
+    } else if ((number %8)==0) { // si no es true la condición, pasará a comprobar si es múltiplo de 8
+        alert(number + " es un múltiplo de 8"); // si esta nueva condición devuelve true, lanzará el   siguiente mensaje
+    } else {
+        alert(number + " no es múltiplo ni de 3, ni de 8"); // en caso de que ninguna de las anteriores sea true, nos arrojará el siguiente error.
+    }
+</script> -->
+                    </li>                
+                    <li><p class="ejercicio">Ejercicio 19</p>
+                    <p>Crear un programa que dadas 2 variables booleanas: <strong>"buen_tiempo" y "trabajo"</strong>, nos digasi puedo ir a la playa.</p>
+                    <p><em>Si no trabajo verifico que haga buen tiempo. En los casos negativos imprimir un mensaje adecuado</em></p>
+                    <p><img src="img/ej_19.png" alt="De número a string" class="img-fluid" width="75%"></p>
+<!--CÓDIGO EJERCICIO 19 <script>
+    let buen_tiempo = true;
+    let trabajo = false;
+    if ((trabajo == false)&&(buen_tiempo == true)) {
+        console.log("¡Vamos a la playa!") //si tenemos libre y hace bueno nos aparece este mensaje
+    }else if ((trabajo == false)&&(buen_tiempo == false)){
+        console.log("Hoy tendrás que descansar en casa") //si tenemos libre pero no hace bueno, nos dirá esto
+    } else{
+        console.log("¡Qué te sea leve!") //si no tenemos libre nos dirá este mensaje.
+    }
+</script> -->
+                    </li>
 <!--HAY QUE HACER HASTA EL 37-->
         </ul>
 
