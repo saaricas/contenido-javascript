@@ -20,11 +20,11 @@
             </button>
             <div class="collapse navbar-collapse" id="navbars">
             <ul class="nav nav-pills navbar-nav me-auto mb-2 mb-sm-0 d-flex">
-                <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
-                <li class="nav-item"><a class="nav-link" href="bloque_variables.html">Variables</a></li>
-                <li class="nav-item"><a class="nav-link" href="bloque_condicioonales.html">Condicionales</a></li>
-                <li class="nav-item"><a class="nav-link active" href="bloque_for.html">Bucles</a></li>
-                <li class="nav-item"><a class="nav-link" href="bloque_funciones.html">Funciones</a></li>
+                <li class="nav-item my-btn-nav"><a class="nav-link" href="index.html">Inicio</a></li>
+                <li class="nav-item my-btn-nav"><a class="nav-link" href="bloque_variables.html">Variables</a></li>
+                <li class="nav-item my-btn-nav"><a class="nav-link" href="bloque_condicioonales.html">Condicionales</a></li>
+                <li class="nav-item my-btn-nav my-active" my-btn-nav><a class="nav-link" href="bloque_for.html">Bucles</a></li>
+                <li class="nav-item my-btn-nav"><a class="nav-link" href="bloque_funciones.html">Funciones</a></li>
             </ul>
             </div>
         </nav> 
@@ -60,7 +60,7 @@
                 </div>
             </div>
             <div class="my-3">
-                <h6>Ejercicios del número <strong>20 al 23</strong></h6>        
+                <h6>Ejercicios del número <strong>20 al 23, 26</strong></h6>        
                 <ul>
                     <li><p class="ejercicio">Ejercicio 20</p>
                         <p>Crear un programa que reste <strong>"5"</strong> a los primeros 20 números (1,2,3,4...20)</p>
@@ -148,6 +148,37 @@
         }
         </script> -->
                     </li>
+                    <li><p class="ejercicio">Ejercicio 26</p>
+                        <p>Escribir un programa que <strong>imprima en la consola</strong> todos los números del 1 al 100</p>
+                        <ul>
+                            <li>Para los múltiplos de <strong>3</strong> imprime "Java"</li>
+                            <li>Para los múltiplos de <strong>5</strong> imprime "Script"</li>
+                            <li>Para los múltiplos de <strong>3 y 5</strong> imprime "Java Script"</li>
+                        </ul>
+                        <p>
+                            <a class="btn btn-primary" data-bs-toggle="collapse" href="#ej26" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                Mostrar la solución
+                                </a>
+                            </p>
+                            <div class="collapse" id="ej26">
+                                <div class="card card-body">
+                                    <p><img src="img/ej_26.png" alt="" class="img-fluid" width="75%"></p>
+                                </div>
+                            </div>
+<!-- CÓDIGO EJERCICIO 26 <script>
+for (i=0; i<= 100; i++){ // establecemos el bucle for 
+    if(i %3 == 0 && i%5==0) { //asignamos la primera condición (y la más restrictiva)
+        console.log("JavaScript");
+    } else if(i%5 == 0){ // asignamos la segunda condición
+        console.log("Script");
+    } else if(i%3==0 ){ //asignamos la tercera condición
+        console.log("Java");
+    }else{ // asignamos lo que pasará cuando no se cumpla ninguna de las 3 condiciones anteriores
+        console.log(i)
+    }
+    }
+</script> -->
+                </li>
                 </ul>
             </div>
         </div>

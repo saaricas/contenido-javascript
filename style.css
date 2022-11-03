@@ -14,6 +14,9 @@ h1{
     font-family: 'Montserrat';
     font-size: 14px;
 }
+p {
+    font-family: 'Montserrat';
+}
 .titulopractica{
     background-color: #F0BE24;
     font-family: 'Fira Code';
@@ -37,4 +40,34 @@ h1{
     border-top:transparent;
     border-right: transparent;
     border-left: transparent;
+}
+.my-active{
+    background-color: #F0BE24;
+    border-radius: 15px;
+}
+.my-btn-nav{
+    margin: 0 10px;
+}
+.temas{
+    width: 100%;
+    flex-wrap: wrap;
+    min-width: 300px;
+    justify-content: center;
+}
+.item{
+    width: 23%;
+    min-width: 300px;
+}
+.item p{
+    font-size: 11px;
+}
+.item a{
+    background-color: #F0BE24;
+    border-radius: 15px;
+    padding: 10px;
+    text-decoration: none;
+    color:#000000;
+}
+.item a:hover{
+    font-weight: 800;
 }

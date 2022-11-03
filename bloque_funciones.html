@@ -20,11 +20,11 @@
             </button>
             <div class="collapse navbar-collapse" id="navbars">
                 <ul class="nav nav-pills navbar-nav me-auto mb-2 mb-sm-0 d-flex">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="bloque_variables.html">Variables</a></li>
-                    <li class="nav-item"><a class="nav-link" href="bloque_condicioonales.html">Condicionales</a></li>
-                    <li class="nav-item"><a class="nav-link" href="bloque_for.html">Bucles</a></li>
-                    <li class="nav-item active"><a class="nav-link" href="bloque_funciones.html">Funciones</a></li>
+                    <li class="nav-item my-btn-nav"><a class="nav-link" href="index.html">Inicio</a></li>
+                    <li class="nav-item my-btn-nav"><a class="nav-link" href="bloque_variables.html">Variables</a></li>
+                    <li class="nav-item my-btn-nav"><a class="nav-link" href="bloque_condicioonales.html">Condicionales</a></li>
+                    <li class="nav-item my-btn-nav"><a class="nav-link" href="bloque_for.html">Bucles</a></li>
+                    <li class="nav-item my-btn-nav my-active"><a class="nav-link" href="bloque_funciones.html">Funciones</a></li>
                 </ul>
             </div>
         </nav>    
@@ -38,8 +38,8 @@
     
     <div class="partes mx-5 my-3">        
         <div class="partes mx-5 my-3">
-            <h5 class="enunciado ps-3" id="parte1">PARTE 5: FUNCIONAES</h5>
-            <!--TEORÍA FOR-->
+            <h5 class="enunciado ps-3" id="parte1">PARTE 5: FUNCIONES</h5>
+            <!--TEORÍA FUNCIONES-->
             <div class="accordion" id="accordionT1">
                 <div class="accordion-item">
                     <h6 class="accordion-header" id="headingT1">
@@ -49,100 +49,217 @@
                     </h6>
                     <div id="teoria1" class="accordion-collapse collapse " aria-labelledby="headingT1" data-bs-parent="#accordionT1">
                         <div class="accordion-body">
-                    <p> escribir aquí la teoria de function</p>  
+                    <p>Las <strong>funciones</strong> son bloques de código, lo que quiere decir que son un conjunto de instrucciones cuyo objetivo es ejecutar una tarea concreta.</p> 
+                    <p>Las funciones pueden contar con varios <em>inputs</em> pero únicamente devolverán una respuesta (<em>output</em>)</p> 
+                    <p>Ventajas que tiene el uso de las funciones:</p>
+                    <ul>
+                        <li>Evitar instrucciones duplicadas</li>
+                        <li>Solucionar un problema complejo con tareas sencillas</li>
+                        <li>Focalizar las tareas prioritarias para el programa</li>
+                        <li>Aportar cierto orden y entendimiento al código</li>
+                        <li>Aportar facilidad y rapidecez para hacer modificaciones</li>
+                    </ul>
+                    <h4>Function Declaration</h4>
+                    <p>Para declarar una función se utiliza la <em>keyword</em> <strong>function</strong> seguida del nombre que le queramos dar a la función. Entre paréntesis (), se establece los <strong>parámetros</strong></p>
+                    <p>Ejemplo de función:</p>
+                    <code>function saludo(name){<br>
+                    return `hola ${name}`<br>
+                    }<br>
+                    saludo(Sara)</code> <small> -> Llamamos a la función para ejecutarla</small>
+                    <p>Las funciones pueden incluir más de un parámetro. Para ello se coloca una coma , para separarlos</p>
+                    <p>Otro aspecto <strong>importante</strong> de las funciones es que siempre hay que cerrarlas. Para ello se utiliza la <em>keyword</em> <strong>return</strong></p>
+                    <p>Se cierra con return porque es la forma que tenemos de decirle a JS que esa es la salida de la funció y así la almacene</p>
+                    <p>Si lo hiciesemos con <strong>console.log</strong> no estaríamos almacenando el resultado, ya que esto únicamente nos muestra el resultado pero no lo guarda. Es decir, es como si nos mostrase el "fantasma" de lo que se ejecutaría con el programa si lo llegásemos a hacer.</p>
                 </div>
             </div>
                 </div>
             </div>
             <div class="my-3">
-                <h6>Ejercicios del número <strong>24 al ..</strong></h6>        
+                <p>Ejercicios número <strong>24, 25 y del 27 al 30</strong></p>        
                 <ul>
-            <li><p class="ejercicio">Ejercicio 20</p>
-                <p>Crear un programa que reste <strong>"5"</strong> a los primeros 20 números (1,2,3,4...20)</p>
+            <li><p class="ejercicio">Ejercicio 24</p>
+                <p>Escribir una función que, dado un mínimo y un máximo, devuelva un <strong>número aleatorio</strong> entre un número y el máximo</p>
                 <p>
-                    <a class="btn btn-primary" data-bs-toggle="collapse" href="#ej20" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    <a class="btn btn-primary" data-bs-toggle="collapse" href="#ej24" role="button" aria-expanded="false" aria-controls="collapseExample">
                     Mostrar la solución
                     </a>
                 </p>
-                <div class="collapse" id="ej20">
+                <div class="collapse" id="ej24">
                     <div class="card card-body">
-                        <p><img src="img/ej_20.png" alt="De número a string" class="img-fluid" width="75%"></p>
+                        <p><img src="img/ej_24.png" alt="" class="img-fluid" width="75%"></p>
                     </div>
                 </div>
-<!--CÓDIGO EJERCICIO 20 <script>
-let numPrueba = 0;
-for (i = 0; i <= 20; i++){ //establecemos el for
-numPrueba= i-5 //establecemos qué va a ocurrir mientras se cumpla la condición del for
-console.log(`Cuenta conmigo: ${numPrueba}`) // imprimimos el resultado en la pantalla
+<!-- CÓDIGO EJERCICIO 24 <script>
+function randomNum (min, max){ // establecemos el nombre de la función y sus parámetros
+    resultado = Math.trunc(Math.random() * (max - min) + min); // almacenamos el resultado en una variable. 
+    // en la variable anterior se ha utilizado: 
+    // - Math.trunc - devuelve el número entero, sin decimales. 
+    // - Math.random - devuelve un número aleatorio entre dos valores establecidos.
+    return alert(`El número premiado es el ${resultado}`) // el output de la función será un alert con el       resultado
 }
+randomNum(Number(prompt("Introduce el número desde el que quieres empezar a contar")),Number(prompt("Introduce el número más alto hasta el que quieras que se incluya"))) // llamamos a la función incorporando los parámetros elegidos por el usuario a través del prompt
 </script> -->
             </li>
-            <li><p class="ejercicio">Ejercicio 21</p>
-                <p>Crear un programa que calcule la <strong>suma</strong>  de los primeros 20 números</p>
+            <li><p class="ejercicio">Ejercicio 25</p>
+                <p>Crear una función <strong>tipCalculator()</strong>, que tenga dos parámetros: una cadena que represente la calidad del servicio recibido y un número que represente el coste total. Devuelve la propina, como un número, basado en lo siguiente:</p>
+                <ul>
+                    <li><strong>Fatal</strong> debería devolver un 5% de propina.</li>
+                    <li><strong>Ok</strong> debería devolver un 15% de la propina</li>
+                    <li><strong>Bueno</strong> debería devolver un 20% de la propina</li>
+                    <li><strong>Excelente</strong> debería devolver un 30% de la propina</li>
+                    <li><strong>toda la demás propina</strong> predeterminada al 18%</li>
+                </ul>
                 <p>
-                    <a class="btn btn-primary" data-bs-toggle="collapse" href="#ej21" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    <a class="btn btn-primary" data-bs-toggle="collapse" href="#ej25" role="button" aria-expanded="false" aria-controls="collapseExample">
                     Mostrar la solución
                     </a>
                 </p>
-                <div class="collapse" id="ej21">
+                <div class="collapse" id="ej25">
                     <div class="card card-body">
-                        <p><img src="img/ej_21.png" alt="De número a string" class="img-fluid" width="75%"></p>
+                        <p><img src="img/ej_25.png" alt="" class="img-fluid" width="75%"></p>
                     </div>
                 </div>
-<!-- CÓDIGO EJERCICIO 21 <script>
-let sumaTotal = 0; // establecemos una variable para almacenar la  suma
-for (i=0; i<= 20; i++){ // definimos el número de veces que vamos a ejecutar el bloque for, es decir, el nº de números que queremos.
-sumaTotal = sumaTotal + i; // actualizamos nuestra variable añadiéndole el número de cada vez que se ejecuta for
-}
-console.log(`La suma de los 20 primeros números es: ${sumaTotal}`); //imprimimos en patanlla el resultado
-</script> -->
-            </li>
-            <li><p class="ejercicio">Ejercicio 22</p>
-                <p>Crear un programa que calcule la <strong>suma</strong>  de los primeros "n" números, donde el valor de n  se escribe desde un prompt</p>
-                <p>
-                    <a class="btn btn-primary" data-bs-toggle="collapse" href="#ej22" role="button" aria-expanded="false" aria-controls="collapseExample">
-                        Mostrar la solución
-                        </a>
-                    </p>
-                    <div class="collapse" id="ej22">
-                        <div class="card card-body">
-                            <p><img src="img/ej_22.png" alt="De número a string" class="img-fluid" width="75%"></p>
-                        </div>
-                    </div>
-<!-- CÓDIGO EJERCICIO 22 <script>
-let numeroElegido = prompt("Este programa suma mágicamente todos los primeros números hasta el que tú elijas. Inserta hasta qué numero quieres que sume:")
-let sumaTotal = 0; // establecemos una variable para almacenar la  suma
-for (i=0; i<= numeroElegido; i++){ // definimos el número de veces que vamos a ejecutar el bloque for, es decir, el nº de números que queremos.
-sumaTotal = sumaTotal + i; // actualizamos nuestra variable añadiéndole el    número de cada vez que se ejecuta for
-}
-alert(`La suma de los ${numeroElegido} primeros números es: ${sumaTotal}`); //imprimimos en pantalla el resultado
-</script> -->
-            </li>
-            <li><p class="ejercicio">Ejercicio 23</p>
-                <p>Crear un programa que calcule el <strong>factorial</strong> de un número n, donde el valor de n se recibe desde el "prompt" y además se verifique si el valor es de tipo number. Si no lo es, se sale del programa con un mensaje de error.</p>
-                <p>
-                    <a class="btn btn-primary" data-bs-toggle="collapse" href="#ej22" role="button" aria-expanded="false" aria-controls="collapseExample">
-                        Mostrar la solución
-                        </a>
-                    </p>
-                    <div class="collapse" id="ej22">
-                        <div class="card card-body">
-                            <p><img src="img/ej_23.png" alt="De número a string" class="img-fluid" width="75%"></p>
-                        </div>
-                    </div>
-<!-- CÓDIGO EJERCICIO 23 <script>
-let n = Number(prompt("Introduce un número")); // creamos un prompt que almacenará un valor tipo Number
-let total=1;  // establecemos una variable para almacenar el valor factorial
-if(!Number.isNaN(n)){ //establecemos la condición para comprobar si el valor    introducido es un número
-    for (i=1; i<= n; i++) { //creamos el bucle for que nos calculará el valor   factorial
-    total = total * i //creamos la operación factorial 
+<!-- CÓDIGO EJERCICIO 25 <script>
+    let tip = 0; //creamos la variable tip en la que almacenaremos el valor de propina según el caso
+function tipCalculator(calidad, importe){ //creamos una función con el nombre dado y establecemos los parámetros clave
+    switch(calidad){ // ya que hay varias opciones posibles, estableceremos un switch para definir los distintos casos
+        case "1":
+            tip = (importe * 5)/100;
+            return alert(`La propina acorde servicio prestado sería de: ${tip} Euros`);
+            break;
+        case "2":
+            tip = (importe * 15)/100;
+            return alert(`La propina acorde servicio prestado sería de: ${tip} Euros`);
+            break;
+        case "3":
+            tip = (importe * 20)/100;
+            return alert(`La propina acorde servicio prestado sería de: ${tip} Euros`);
+            break;
+        case "4":
+            tip = (importe * 30)/100;
+            return alert(`La propina acorde servicio prestado sería de: ${tip} Euros`);
+            break;
+        default:
+            tip = (importe * 18)/100;
+            return alert(`La propina acorde servicio prestado sería de: ${tip} Euros`);
+            break;
     }
-    alert(`El valor factorial de ${n} es ${total}`); //mostrará este mensaje en pantalla al usuario
-}else{
-    alert("No has ingresado un valor numérico") //en caso de no haber           introducido un valor numérico aparecerá este mensaje de error
 }
+tipCalculator(prompt("Valora la calidad del servicio de 1 al 4. Siendo 1 el valor más bajo"), Number(prompt("Introduce el importe total del servicio"))) // llamamos a la función y dejamos que el usuario establezca los parámetros a través del prompt. Para facilitar el programa se sugiere al usuario que puntue del 1-4.
 </script> -->
-                    </li>
+            </li>
+            <li><p class="ejercicio">Ejercicio 27</p>
+                <p>Escribir una función que nos diga si <strong>un número es par o no</strong> de un número n, donde el valor de n se recibe desde el "prompt" y además se verifique si el valor es de tipo number. Si no lo es, se sale del programa con un mensaje de error.</p>
+                <p>
+                    <a class="btn btn-primary" data-bs-toggle="collapse" href="#ej27" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        Mostrar la solución
+                        </a>
+                    </p>
+                    <div class="collapse" id="ej27">
+                        <div class="card card-body">
+                            <p><img src="img/ej_27.png" alt="" class="img-fluid" width="75%"></p>
+                        </div>
+                    </div>
+<!-- CÓDIGO EJERCICIO 27 <script>
+n = 0; //definimos la variable
+function par(n){ //creamos la función par con el parámetro de la variable estabelcida
+    if(n%2 == 0){ // establecemos la condición de si el número es par
+        alert(`${n} es un número par`)
+    }else{ // si el número no es par mostrará lo siguiente
+        alert(`${n} no es un número par`)
+    }
+}
+par(Number(prompt("Introduce un número para comprobar si es par o no"))) // por último creamos el prompt que solicite la entrada de un número
+</script> -->
+            </li>
+            <li><p class="ejercicio">Ejercicio 28</p>
+                <p>Escribir una función que imprima un intervalo de números entre 0 y 10 <strong>excluyendo los pares</strong></p>
+                <p>
+                    <a class="btn btn-primary" data-bs-toggle="collapse" href="#ej28" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        Mostrar la solución
+                        </a>
+                    </p>
+                    <div class="collapse" id="ej28">
+                        <div class="card card-body">
+                            <p><img src="img/ej_28.png" alt="" class="img-fluid" width="75%"></p>
+                        </div>
+                    </div>
+<!-- CÓDIGO EJERCICIO 28 <script>
+let a = 0; // establecemos una variable para el número desde el que contará
+let b = 0; // establecemos una variable para el número hasta que contará
+function sinPares(a , b){ //creamos una función con los parámetros de las variables anteriores
+    for (i=a; i<=b;i++){ // establecemos que el programa haga una cuenta
+    if(i%2==0){ // creamos la condición de los números pares para que los salte a través del "continue"
+        continue
+    }else{
+        console.log(i); // los números que no sean pares sí que se imprimirán en la consola
+    }
+}
+}
+sinPares(Number(prompt("inserta el primer número para contar")), Number(prompt("Inserta el número hasta el que contará"))); // creamos un prompt para definir los numeros desde el que empezará y terminará de contar la función
+</script> -->
+            </li>
+            <li><p class="ejercicio">Ejercicio 29</p>
+                <p>Te dan el length y el width de un polígono de 4 lados. El polígono puede ser un rectángulo o un cuadrado. Si es un <strong>cuadrado</strong> devuelve su <strong>área</strong>. Si es un <strong>rectángulo</strong> devuelve su <strong>perímetro</strong></p>
+                <p>
+                    <p><em>Para este ejercicio debes asumir que es un cuadrado, de lo contrario, es un rectángulo</em></p>
+                    <a class="btn btn-primary" data-bs-toggle="collapse" href="#ej29" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        Mostrar la solución
+                        </a>
+                    </p>
+                    <div class="collapse" id="ej29">
+                        <div class="card card-body">
+                            <p><img src="img/ej_29.png" alt="" class="img-fluid" width="75%"></p>
+                        </div>
+                    </div>
+<!-- CÓDIGO EJERCICIO 29 <script>
+let length = 0; // establecemos las variables necesarias para la función
+let width = 0;
+let area = 0
+let perimetro = 0;
+function poligono (length, width){ // creamos la función con los parámetros length y width.
+    if(length == width){ // establecemos la condició para saber si es un cuadrado. Si es un cuadrado length y width deberán medir lo mismo
+        area = length * width;
+        alert(`La figura que tienes es un cuadrado y su área es ${area}`)
+    }else{ // si no es un cuadrado, entonces es un rectángulo, por lo que procedemos a calcular su perímetro
+        perimetro = (length*2)+ (width*2);
+        alert(`La figura que tienes es un rectángulo y su perímetro es ${perimetro}`)
+    }
+}
+poligono(Number(prompt("Introduce la medida de uno de los lados")), Number(prompt("Introduce la medida del otro lado"))); //creamos el prompt que recogerá los parámetros que elija el usuario.
+</script> -->
+            </li>
+            <li><p class="ejercicio">Ejercicio 30</p>
+                <p>Escribe una función que calcule el área de un círculo cuyo radio se establezca entre 1 y el 10</p>
+                    <a class="btn btn-primary" data-bs-toggle="collapse" href="#ej30" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        Mostrar la solución
+                        </a>
+                    </p>
+                    <div class="collapse" id="ej30">
+                        <div class="card card-body">
+                            <p><img src="img/ej_30.png" alt="" class="img-fluid" width="75%"></p>
+                        </div>
+                    </div>
+<!-- CÓDIGO EJERCICIO 30 <script>
+    let pi = Math.PI; // establecemos las variables que usaremos
+    let radio = 0;
+    let área = 0;
+    function areaCirculo(radio){ //creamos la función
+        if(radio>=1 && radio<=10){ // establecemos la condición por la que el radio tendrá que estar entre 1 y 10
+            area = pi * (radio**2); // si se cumple establecemos que se      calcule el área
+            area = area.toFixed(2); // redondeamos el resultado a 2 decimales
+            alert(`El área de tu círculo de radio ${radio} es ${area}`) //      imprimimos el resultado en un alert
+        }else{ // si el radio supera las medidas definidas se mostrará el    siguiente mensaje
+            alert(`Wow, es un círculo demasiado grande`)
+        }
+    }
+    areaCirculo(Number(prompt("Introduce el valor del radio de tu círculo"))) // llamamos a la función con un prompt para que el usuario pueda introducir  el valor deseado.
+</script> -->
+            </li>
+        </ul>
+    </div>
+</div>
+</div>
 </main>
 <!-- JavaScript Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
