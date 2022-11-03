@@ -22,9 +22,10 @@
                 <ul class="nav nav-pills navbar-nav me-auto mb-2 mb-sm-0 d-flex">
                     <li class="nav-item my-btn-nav"><a class="nav-link" href="index.html">Inicio</a></li>
                     <li class="nav-item my-btn-nav"><a class="nav-link" href="bloque_variables.html">Variables</a></li>
-                    <li class="nav-item my-btn-nav"><a class="nav-link" href="bloque_condicioonales.html">Condicionales</a></li>
+                    <li class="nav-item my-btn-nav"><a class="nav-link" href="bloque_condicionales.html">Condicionales</a></li>
                     <li class="nav-item my-btn-nav"><a class="nav-link" href="bloque_for.html">Bucles</a></li>
                     <li class="nav-item my-btn-nav my-active"><a class="nav-link" href="bloque_funciones.html">Funciones</a></li>
+                    <li class="nav-item my-btn-nav"><a class="nav-link" href="bloque_array.html">Arrays</a></li>
                 </ul>
             </div>
         </nav>    
@@ -75,7 +76,7 @@
                 </div>
             </div>
             <div class="my-3">
-                <p>Ejercicios número <strong>24, 25 y del 27 al 30</strong></p>        
+                <p>Ejercicios número <strong>24, 25 y del 27 al 31</strong></p>        
                 <ul>
             <li><p class="ejercicio">Ejercicio 24</p>
                 <p>Escribir una función que, dado un mínimo y un máximo, devuelva un <strong>número aleatorio</strong> entre un número y el máximo</p>
@@ -255,6 +256,29 @@ poligono(Number(prompt("Introduce la medida de uno de los lados")), Number(promp
     }
     areaCirculo(Number(prompt("Introduce el valor del radio de tu círculo"))) // llamamos a la función con un prompt para que el usuario pueda introducir  el valor deseado.
 </script> -->
+            </li>
+            <li><p class="ejercicio">Ejercicio 31</p>
+                <p>Encuentra la forma más rápida de convertir la primera letra de una cadena en mayúscula a través de una función</p>
+                <p><em>Ejemplo: capitalize('simon') => Simon</em></p>
+                    <a class="btn btn-primary" data-bs-toggle="collapse" href="#ej31" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        Mostrar la solución
+                        </a>
+                    </p>
+                    <div class="collapse" id="ej31">
+                        <div class="card card-body">
+                            <p><img src="img/ej_31.png" alt="" class="img-fluid" width="75%"></p>
+                        </div>
+                    </div>
+<!-- CÓDIGO EJERCICIO 31 <script>
+    let word = ""; // definimos la variable que usaremos de parámetro
+    function capitalize(word){ // creamos la función
+        return alert(word.charAt(0).toUpperCase() + word.slice(1))
+        // establecemos charAt - para coger únicamente la primera letra y toUpperCase   para hacerla mayúscula. 
+        //añadimos el resto de la palabra con slice(1) que lo que hará será quitar la   primera letra (la que ya tenemos puesta en mayúsucla)
+    }
+    console.log(capitalize(prompt("Escribe la palabra que quieras poner en mayúscula"))) // como siempre, para hacerlo más dinámico solicitamos la palabra a través del prompt
+</script> -->
+
             </li>
         </ul>
     </div>

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practicas JS</title>
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fasthand&family=Fira+Code:wght@300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm sticky-top bg-light" aria-label="">
+        <div class="container-fluid">
+            <a href="/" class= "d-flex align-items-center mb3 mb-md-0 me-md-auto text-decoration-none text-dark"><img src="img/js-logo.webp" class="mb-3 mb-md-0 me-md-auto" width="50px"> <span class="fs-4">JavaScript</span></a>
+            <button class="navbar-toggler" type="button" data-bs-target="#navbars" aria-controls="navbars" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbars">
+                <ul class="nav nav-pills navbar-nav me-auto mb-2 mb-sm-0 d-flex">
+                    <li class="nav-item my-btn-nav"><a class="nav-link" href="index.html">Inicio</a></li>
+                    <li class="nav-item my-btn-nav"><a class="nav-link" href="bloque_variables.html">Variables</a></li>
+                    <li class="nav-item my-btn-nav"><a class="nav-link" href="bloque_condicioonales.html">Condicionales</a></li>
+                    <li class="nav-item my-btn-nav"><a class="nav-link" href="bloque_for.html">Bucles</a></li>
+                    <li class="nav-item my-btn-nav"><a class="nav-link" href="bloque_funciones.html">Funciones</a></li>
+                    <li class="nav-item my-btn-nav my-active"><a class="nav-link" href="bloque_array.html">Arrays</a></li>
+                </ul>
+            </div>
+        </nav>    
+<main>
+    <div>
+        <h1 class="text-center">EJERCICIOS JAVASCRIPT</h1>
+    </div>
+    <div id="practica3" class="mx-4">
+        <h3 class="titulopractica text-center">ARRAYS</h3>   
+    </div>
+    
+    <div class="partes mx-5 my-3">        
+        <div class="partes mx-5 my-3">
+            <h5 class="enunciado ps-3" id="parte1">PARTE 6: ARRAYS</h5>
+            <!--TEORÍA FUNCIONES-->
+            <div class="accordion" id="accordionT1">
+                <div class="accordion-item">
+                    <h6 class="accordion-header" id="headingT1">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#teoria1" aria-expanded="true" aria-controls="teoria1">
+                            Teoría 5: Arrays
+                        </button>
+                    </h6>
+                    <div id="teoria1" class="accordion-collapse collapse " aria-labelledby="headingT1" data-bs-parent="#accordionT1">
+                        <div class="accordion-body">
+                    <p>Los <strong>array</strong> pertenecen a la clase "objeto".</p> 
+                    <p>Son un listado de datos de diferentes tipos dispuestos de forma <strong>ordenada</strong></p> 
+                    <p>Pueden incluirse unos dentro de otros</p>
+                    <p>Son más útiles que los objetos para crear órdenes u operaciones complejas.</p>
+                    <p>Se declaran mediante los corchetes []</p>
+                    <p>Los <strong>índices</strong> son los números de posicion que tienen los datos dentro del array. Se comienza a contar desde 0 y los datos entre sí se separan por comas ,</p>
+                    <h5>Acceder a los datos del array</h5>
+                    <p>Podemos acceder a un dato que hay dentro de un array llamándolo mediante su posición:</p>
+                    <code>console.log(array[numeroPosicion])</code>
+                    <p>También podemos acceder a un dato de un array que esta dentro de otro array.</p>
+                    <code>let lenguajes = [["HTML", 5],["CSS", 3],["JS",4]]</code>
+                        <em>//queremos acceder al dato CSS</em>
+                    <code>console.log(lenguajes[1][0])
+                    </code>
+                    <h5>Reemplazar datos array</h5>
+                    <p>Podemos cambiar los datos que se encuentran dentro de un array realizando lo mismo que para reasignar una variable</p>
+                    <code>let names = ["Sara", "Luna"]</code>
+                        <em>//Para hacer la modificación accedemos al dato que queremos reemplazar a través de su índice y escribimos el nuevo dato.</em>
+                    <code>names[1]="Freyja"</code>
+                    <h5>Diferentes formas de acceder y modificar los datos de los array</h5>
+                    Hay 3 fromas diferentes para realizar cambios o leer los datos de los array. Estas son:
+                    <ul>
+                        <li><strong>Mutator</strong>: devuelve un resultado que modifica el array</li>
+                        <li><strong>Iterator</strong>: Recorre los valores del array. Bucles</li>
+                        <li><strong>Accesor</strong>: devuleve una copia del arrey original con el cambio hecho</li>
+                    </ul>
+                </div>
+            </div>
+                </div>
+            </div>
+            <div class="my-3">
+                <p>Ejercicios de número <strong>32 al ...</strong></p>        
+                <ul>
+            <li><p class="ejercicio">Ejercicio 32</p>
+                <p>Calcular la serie de fibonacci que devuelve hasta n números bajo forma de array</p>
+                <p><em>Ejemplo: [1,2,3,5,8,13,21,34]</em></p>
+                <p>
+                    <a class="btn btn-primary" data-bs-toggle="collapse" href="#ej32" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    Mostrar la solución
+                    </a>
+                </p>
+                <div class="collapse" id="ej32">
+                    <div class="card card-body">
+                        <p><img src="img/ej_32.png" alt="" class="img-fluid" width="75%"></p>
+                    </div>
+                </div>
+<!-- CÓDIGO EJERCICIO 32 <script>
+let num = prompt("Define cuántos números quieres que compongan la serie de Fibonnaci") //Creamos un prompt para que el usuario determine el número de datos que tendrá la serie
+let fibo = [0,1] //establecemos el comienzo del array para poder calcular
+let resultado = 0; // definimos la variable resultado
+for(i=0;i<(num-2);i++){ //establecemos el número de veces que se repetirá el cálculo del número de la serie a partir de valor que ha asignado el usuario
+    resultado = fibo[fibo.length-1]+fibo[fibo.length-2]; // establecemos la operación que dará como resultado el siguiente número de la serie sumando el número anterior y el anterior del anterior.
+    fibo.push(resultado) // pusheamos el valor dentro del array
+}
+alert(fibo); // imprimimos el resultado de la serie en un alert.
+</script> -->
+            </li>
+            <li><p class="ejercicio">Ejercicio 33</p>
+                <p>A partir de este array de números, devolver un array con solo números pares:</p>
+                <em> const numeros = [1,2,3,4,5,6,7,8,9,10];</em>
+                <p>
+                    <a class="btn btn-primary" data-bs-toggle="collapse" href="#ej33" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    Mostrar la solución
+                    </a>
+                </p>
+                <div class="collapse" id="ej33">
+                    <div class="card card-body">
+                        <p><img src="img/ej_33.png" alt="" class="img-fluid" width="75%"></p>
+                    </div>
+                </div>
+<!-- CÓDIGO EJERCICIO 33 <script>
+const numeros = [1,2,3,4,5,6,7,8,9,10]; // declaramos la array dada
+let arrayPar = []; // creamos una variable para almacenar la array modificada
+for(i=1; i<=numeros.length;i++){ //creamos el programa que contará según los datos
+    if(i%2==0){ //establecemos la condición de si es par que guarde el dato en la nueva variable
+        arrayPar.push(i); 
+    }
+}
+console.log(arrayPar)
+</script> -->
+            </li>
+            <li><p class="ejercicio">Ejercicio 34</p>
+                <p>A partir de estos días filtrar por días que empiezan por "m":</p>
+                <p><em>const dias = ["lunes","martes","miércoles","jueves","viernes","sábado","domingo"]</em></p>
+                <p>
+                    <a class="btn btn-primary" data-bs-toggle="collapse" href="#ej34" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        Mostrar la solución
+                        </a>
+                    </p>
+                    <div class="collapse" id="ej34">
+                        <div class="card card-body">
+                            <p><img src="img/ej_34.png" alt="" class="img-fluid" width="75%"></p>
+                        </div>
+                    </div>
+<!-- CÓDIGO EJERCICIO 34 <script>
+const dias = ["lunes","martes","miércoles","jueves","viernes","sábado","domingo"]; // establecemos la variable dada por el ejercicio
+let diasM = []; // creamos una variable para almacenar los días que empiezan por M
+let inicial = []; // creamos una variable para ir almacenando las iniciales
+for(i=0; i<dias.length; i++){ // establecemos el bucle for que recorrará el primer array "dias"
+   inicial.push(dias[i].slice(0,1)); //almacenamos la inicial en la variable destinada para ello
+    if(inicial[i].includes("m") == true){ // creamos la condición por la que si la inicial es una "m" se almacene el valor en el array final
+        diasM.push(dias[i]);
+    }else{
+        continue
+    }
+}
+console.log(diasM); // visualizamos el array final para comprobar si se ha efectuado
+</script> -->
+            </li>
+            <li><p class="ejercicio">Ejercicio 35</p>
+                <p>A partir de este array de números, ordena la secuencia de forma <strong>creciente</strong> y luego filtra los números <strong>menores que 10</strong>.</p>
+                <p><em>let num = [100,2,20,35,4,44]</em></p>
+                <p>
+                    <a class="btn btn-primary" data-bs-toggle="collapse" href="#ej35" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        Mostrar la solución
+                        </a>
+                    </p>
+                    <div class="collapse" id="ej35">
+                        <div class="card card-body">
+                            <p><img src="img/ej_35.png" alt="" class="img-fluid" width="75%"></p>
+                        </div>
+                    </div>
+<!-- CÓDIGO EJERCICIO 35 <script>
+let num = [100,2,20,35,4,44]; // definimos el array dado
+let numMin10= []; // creamos un array vacío donde almacenar los números mayores de 10
+let check = 0; // creamos una variable para almacenar los valores del array y comprobar si cumplen las condicones
+num.sort(function(a,b){ // utilizamos ".sort(function(a,b)" para ordenar los valores
+    return a-b;
+})
+console.log(num); // imprimimos en pantalla el resultado para comprobar que están bien ordenados
+for(i=0;i<num.length;i++){ // realizamos un bucle for que irá extrayendo los valores del array
+    let check = Number(num[i]); // almacenamos el valor extraído por for en la variable check
+    if(check >=10){ // creamos el condicional que comprobará si el número extraído es mayor o igual que 10
+        numMin10.push(num[i]); // si el número cumple con la condición lo almacenaremos en el array creado para ello.
+    }
+} 
+console.log(numMin10) // imprimimos en pantalla el resultado para comprobar que solo están almacenados los menores o iguales que 10
+
+</script> -->
+            </li>
+            <li><p class="ejercicio">Ejercicio 36</p>
+                <p>Devuelve las dos edades más altas dado una matriz de números que representen</p>
+                <code><em>function dosEdadesMasAltas() <br>
+                    //code<br>
+                }<br>
+                dosEdadesMasAltas([1,2,10,8,22,3,6,12,80,4,55,19]) // [80,55]</em></code>
+                <p>
+                    <p><em>Para este ejercicio debes asumir que es un cuadrado, de lo contrario, es un rectángulo</em></p>
+                    <a class="btn btn-primary" data-bs-toggle="collapse" href="#ej36" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        Mostrar la solución
+                        </a>
+                    </p>
+                    <div class="collapse" id="ej36">
+                        <div class="card card-body">
+                            <p><img src="img/ej_36.png" alt="" class="img-fluid" width="75%"></p>
+                        </div>
+                    </div>
+<!-- CÓDIGO EJERCICIO 36 <script>
+let edades = [1,2,10,8,22,3,6,12,80,4,55,19]; // establecemos el arrey dado por el ejercicio
+let dosEdadesMasAltas = []; // creamos el array vacío en el que se almacenarán los dos valores más altos
+edades.sort(function(a,b){  // ordenamos el array dado
+    return a - b
+});
+console.log(edades); // comprobamos que se ha ordenado
+dosEdadesMasAltas.push(edades[edades.length - 1]); // almacenamos el valor más alto
+dosEdadesMasAltas.push(edades[edades.length - 2]); // almacenamos el segundo valor más alto
+console.log(dosEdadesMasAltas); // imprimimos el resultado para comprobar si se ha hecho bien
+</script> -->
+            </li>
+            <li><p class="ejercicio">Ejercicio 37</p>
+                <p>A partir de un array, devuelve otro array con la elevación a potencia de 3 de cada elemento del array inicial</p>
+                <p><em>let pow = [2,4,25] --> [8,64,15625]</em></p>
+                    <a class="btn btn-primary" data-bs-toggle="collapse" href="#ej37" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        Mostrar la solución
+                        </a>
+                    </p>
+                    <div class="collapse" id="ej37">
+                        <div class="card card-body">
+                            <p><img src="img/ej_37.png" alt="" class="img-fluid" width="75%"></p>
+                        </div>
+                    </div>
+<!-- CÓDIGO EJERCICIO 37 <script>
+let pow = [2,4,25] // establecemos el array dado
+pow = pow.map(function(element){ // utilizamos map. para modificar el array elevando sus elementos al cubo
+    return element **3;
+});
+console.log(pow) // imprimimos el resultado para comprobarlo
+</script> -->
+            </li>
+            <li><p class="ejercicio">Ejercicio 38</p>
+                <p>A partir de un array, devuelve otro array con las primeras 3 letras por cada elemento del array inicial</p>
+                <p><em>Ejemplo: <br>
+                const dias = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"]<br>
+                Resultado = ["Lun", "Mar", "Mie", "Jue", "Vie", "Sab", "Dom"]</em></p>
+                    <a class="btn btn-primary" data-bs-toggle="collapse" href="#ej38" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        Mostrar la solución
+                        </a>
+                    </p>
+                    <div class="collapse" id="ej38">
+                        <div class="card card-body">
+                            <p><img src="img/ej_38.png" alt="" class="img-fluid" width="75%"></p>
+                        </div>
+                    </div>
+<!--CÓDIGO EJERCICIO 38 <script>
+const dias = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"]; // establecemos el array dado
+let resultado = dias.map(function(element){ 
+    return element.slice(0,3)// incorporamos los valores nuevos a una nueva variable. A través de .map añadimos a "resultado" los 3 primeros caracteres de cada elemento
+})
+console.log(resultado) // imprimimos el resultado en consola para comprobar
+</script> -->
+
+            </li>
+        </ul>
+    </div>
+</div>
+</div>
+</main>
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+</body>
+</html>
