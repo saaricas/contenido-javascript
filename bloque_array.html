@@ -337,8 +337,10 @@ let minNumero = prompt("Establece el valor desde el que empezarán a buscarse lo
 let maxNumero = prompt("Define el último valor hasta el que se buscarán los números aleatorios. Este valor debe ser superior a 20")
 let cant = prompt("Inserta la cantidad de números que tendrá tu array original");
 let numPares=[];
+let numDoble10 = [];
 let mayor10 = [];
 let sumaFinal=[];
+
 //Generamos el array aleatorio utilizando math.floor y math.random con los valores que ha introducido el usuario.
 let miarray = Array.from({length: Number(cant)}, () => Math.floor(Math.random() * (Number(maxNumero) - Number(minNumero))) + Number(minNumero));
 alert(`Tu serie de números son: ${miarray}`)
@@ -353,10 +355,15 @@ for(i=0;i<miarray.length;i++){
 }
 alert(`Seleccionando solo los números pares nos quedamos con: ${numPares}`);
 console.log(numPares)
+//Duplicamos los números obtenidos y sumamos 10
+numDoble10 = numPares.map(function(elements){
+    return (elements*2)+10
+})
+console.log(`actualizacion de pares: ${numDoble10}`);
 //seleccionamos los números mayores de 10 y menores de 100 y los almacenamos en un array
-for(i=0;i<numPares.length;i++){
-    if(Number(numPares[i])>10 && Number(numPares[i])<100){
-        mayor10.push(numPares[i])
+for(i=0;i<numDoble10.length;i++){
+    if(Number(numDoble10[i])>10 && Number(numDoble10[i])<100){
+        mayor10.push(numDoble10[i])
     }else{
         continue
     }
