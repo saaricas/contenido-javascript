@@ -262,6 +262,115 @@ console.log(resultado) // imprimimos el resultado en consola para comprobar
 </script> -->
 
             </li>
+            <li><p class="ejercicio">Ejercicio 39</p>
+                <p>A partir de un array de números, devolver la suma de los números presentes en el array</p>
+                    <a class="btn btn-primary" data-bs-toggle="collapse" href="#ej39" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        Mostrar la solución
+                        </a>
+                    </p>
+                    <div class="collapse" id="ej39">
+                        <div class="card card-body">
+                            <p><img src="img/ej_39.png" alt="" class="img-fluid" width="75%"></p>
+                        </div>
+                    </div>
+<!-- CÓDIGO EJERCICIO 38 <script>
+let numeros = [1,4,8,10,7] //definimos el array
+let suma = numeros.reduce(function(a,b){ // utilizamos la función reduce que realizará la suma automáticamente del array. Guardamos esta suma en la nueva variable establecida "suma"
+    return a + b
+});
+console.log(suma) // imprimos en pantalla el resultado para comprobar que haya funcionado
+</script> -->
+
+            </li>
+            <li><p class="ejercicio">Ejercicio 40</p>
+                <p>Calcula la media de la puntuación de un partido de bowling.</p>
+                <p>La máquina pone números negativos y queremos eliminarlos, haciendo la media solo de los números positivos</p>
+                <p><em>let puntuacion = [20,10,-5,5,35,-10,25,-15,15,30,40, -25]</em></p>
+                
+                    <p><a class="btn btn-primary" data-bs-toggle="collapse" href="#ej40" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        Mostrar la solución
+                        </a>
+                    </p>
+                    <div class="collapse" id="ej40">
+                        <div class="card card-body">
+                            <p><img src="img/ej_40.png" alt="" class="img-fluid" width="75%"></p>
+                        </div>
+                    </div>
+<!-- CÓDIGO EJERCICIO 40 <script>
+let puntuacion = [20,10,-5,5,35,-10,25,-15,15,30,40,-25]; //declaramos la variable con el array
+let numPositivos = []; // creamos una variable para almacenar los números positivos
+let suma = 0; // creamos una variable para almacenar la suma
+for(i=0; i<puntuacion.length; i++){ // establecemos el bucle for para restrear los datos positivos y almacenarlos en la variable para sumarlos
+    if(Number(puntuacion[i])>0){
+        numPositivos.push(puntuacion[i]) // almacenamos los valores positivos en el array
+    }else{
+        continue
+    }
+}
+suma = numPositivos.reduce(function(a,b){ // establecemos la función reduce para sumar los datos positivos y la almacenamos en la variable suma
+    return a + b;
+})
+console.log(suma); // imprimos el resultado de la suma
+</script> -->
+            </li>
+            <li><p class="ejercicio">Ejercicio 41</p>
+                <p>Generando un array de números aleatorios dado un mínimo y un máximo:
+                    <ul>
+                        <li>filtramos sólo los números pares</li>
+                        <li>duplicamos los números obtenidos y sumamos 10</li>
+                        <li>filtramos estos números para valores mayores de 10 y menos de 100</li>
+                        <li>y hacemos la suma final</li>
+                    </ul>
+                    </p>
+                    <p><a class="btn btn-primary" data-bs-toggle="collapse" href="#ej41" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        Mostrar la solución
+                        </a>
+                    </p>
+                    <div class="collapse" id="ej41">
+                        <div class="card card-body">
+                            <p><img src="img/ej_41.png" alt="" class="img-fluid" width="75%"></p>
+                        </div>
+                    </div>
+<!-- CÓDIGO EJERCICIO 41 <script>
+    //Definimos las variables y los arrays. Las variales las podrá elegir el usuario a través de un prompt para generar así el array aleatorio
+let minNumero = prompt("Establece el valor desde el que empezarán a buscarse los números aleatorios")
+let maxNumero = prompt("Define el último valor hasta el que se buscarán los números aleatorios. Este valor debe ser superior a 20")
+let cant = prompt("Inserta la cantidad de números que tendrá tu array original");
+let numPares=[];
+let mayor10 = [];
+let sumaFinal=[];
+//Generamos el array aleatorio utilizando math.floor y math.random con los valores que ha introducido el usuario.
+let miarray = Array.from({length: Number(cant)}, () => Math.floor(Math.random() * (Number(maxNumero) - Number(minNumero))) + Number(minNumero));
+alert(`Tu serie de números son: ${miarray}`)
+console.log(miarray)
+//Seleccionamos únicamente los números pares y los almacenamos en un nuevo array
+for(i=0;i<miarray.length;i++){
+    if(Number(miarray[i])%2 ==0){
+        numPares.push(miarray[i])
+    }else{
+        continue
+    }
+}
+alert(`Seleccionando solo los números pares nos quedamos con: ${numPares}`);
+console.log(numPares)
+//seleccionamos los números mayores de 10 y menores de 100 y los almacenamos en un array
+for(i=0;i<numPares.length;i++){
+    if(Number(numPares[i])>10 && Number(numPares[i])<100){
+        mayor10.push(numPares[i])
+    }else{
+        continue
+    }
+}
+alert(`Los seleccionados son los mayores de 10 y menores de 100, por lo que nos queda: ${mayor10}`)
+console.log(mayor10);
+//Por último, los números que han quedado tras el proceso de selección los sumamos y guardamos la suma en una variable.
+sumaFinal = mayor10.reduce(function(a,b){
+    return a + b
+})
+alert(`Tras estos cálculos, tu número de la fortuna es: ${sumaFinal}`)
+console.log(sumaFinal)
+</script> -->
+            </li>
         </ul>
     </div>
 </div>
