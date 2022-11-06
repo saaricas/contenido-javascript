@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -25,8 +26,8 @@
                     <li class="nav-item my-btn-nav"><a class="nav-link" href="bloque_condicioonales.html">Condicionales</a></li>
                     <li class="nav-item my-btn-nav"><a class="nav-link" href="bloque_for.html">Bucles</a></li>
                     <li class="nav-item my-btn-nav"><a class="nav-link" href="bloque_funciones.html">Funciones</a></li>
-                    <li class="nav-item my-btn-nav my-active"><a class="nav-link" href="bloque_array.html">Arrays</a></li>
-                    <li class="nav-item my-btn-nav"><a class="nav-link" href="bloque_objetos.html">Objetos</a></li>
+                    <li class="nav-item my-btn-nav"><a class="nav-link" href="bloque_array.html">Arrays</a></li>
+                    <li class="nav-item my-btn-nav my-active"><a class="nav-link" href="bloque_objetos.html">Objetos</a></li>
                 </ul>
             </div>
         </nav>    
@@ -378,67 +379,6 @@ sumaFinal = mayor10.reduce(function(a,b){
 alert(`Tras estos cálculos, tu número de la fortuna es: ${sumaFinal}`)
 console.log(sumaFinal)
 </script> -->
-            </li>
-            <li><p class="ejercicio">Ejercicio 42</p>
-                <p>A partir de 2 arrays, compararlos y devolver un array sin duplicados a través de una función:
-                    <ul>
-                        <li>Ejemplo:</li>
-                        <li><code>a=[1,2,3,4]</code></li>
-                        <li><code>b=[1,2]</code></li>
-                        <li>Resultado=[3,4]</li>
-                    </ul>
-                    </p>
-                    <p><a class="btn btn-primary" data-bs-toggle="collapse" href="#ej42" role="button" aria-expanded="false" aria-controls="collapseExample">
-                        Mostrar la solución
-                        </a>
-                    </p>
-                    <div class="collapse" id="ej42">
-                        <div class="card card-body">
-                            <p><img src="img/ej_42.png" alt="" class="img-fluid" width="75%"></p>
-                        </div>
-                    </div>
-<!-- CÓDIGO EJERCICIO 42  <script>
-let a  = [1,2,3,4]; // definimos el primer array
-let b = [1,2]; // definimos el segundo array
-let diferentes = []; // creamos uno vacío para almacenar los números diferentes
-function difArray(a, b){ //definimos la función
-    diferentes = a.filter(el => !b.includes(el)); // a través de filter, le decimos que busque en el array A los elementos que no son iguales que en el array b.
-    return diferentes; // y nos devolverá el resultado
-}
-console.log(difArray(a,b)); // llamamos a la función y la ejecutamos
-</script> -->
-            </li>
-            <li><p class="ejercicio">Ejercicio 43</p>
-                <p>A partir de un array, escribir una función que encuentre el único elemento distinto.
-                    <ul>
-                        <li>Ejemplo:</li>
-                        <li><code>[5,5,5,5,4,5,5] = 4,</code></li>
-                        <li><code>[2,2,2,2,3,2,2,2,2] = 3</code></li>
-                    </ul>
-                    </p>
-                    <p><a class="btn btn-primary" data-bs-toggle="collapse" href="#ej43" role="button" aria-expanded="false" aria-controls="collapseExample">
-                        Mostrar la solución
-                        </a>
-                    </p>
-                    <div class="collapse" id="ej43">
-                        <div class="card card-body">
-                            <p><img src="img/ej_43.png" alt="" class="img-fluid" width="75%"></p>
-                        </div>
-                    </div>
-<!-- CÓDIGO EJERCICIO 43 <script>
-let arr1=[5,5,5,5,4,5,5]; // establecemos los arrays del ejemplo
-let arr2 = [2,2,2,2,3,2,2,2,2];
-function valorDif (array){ //definimos la función 
-    array.sort((a,b)=> a - b); // en primer lugar ordenamos los valores de menor a mayor en el array
-    if (array[0]==array[1]){ // establecemos la condición por la que si el primero y el segundo valor son iguales devolverá el valor del último elemento
-        return array.pop();
-    }else{
-        return array[0] // si no son iguales, se devolverá el valor del primer elemento
-    }
-}
-console.log("el valor diferente es: " + valorDif(arr1))
-console.log("el valor diferente es: " + valorDif(arr2))
-</script> --> 
             </li>
         </ul>
     </div>
